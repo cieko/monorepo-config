@@ -1,3 +1,4 @@
+import ClientSide from "./ClientSide";
 import { trpc } from "./trpc"
 
 export default async function Home() {
@@ -6,6 +7,9 @@ export default async function Home() {
   });
 
   return (
-    <main>{response}</main>
+    <main>
+      <p>Server side - {response}</p>
+      <ClientSide />
+    </main>
   )
 }
